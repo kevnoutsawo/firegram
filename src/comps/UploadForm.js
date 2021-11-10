@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import ProgressBar from 'progress'
 
 const UploadForm = () => {
-    const [file, setfile] = useState(null)
+    const [file, setFile] = useState(null)
     const [error, setError] = useState(null)
 
     const types = ['image/png', 'image/jpeg']
@@ -11,10 +11,10 @@ const UploadForm = () => {
         let selected = e.target.files[0];
         
         if(selected && types.includes(selected.type)) {
-            setfile(selected)
+            setFile(selected)
             setError('')
         } else {
-            setfile(null)
+            setFile(null)
             setError('Please select an image file (png or jpeg)')
         }
     }

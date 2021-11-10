@@ -2,7 +2,7 @@ import { useState, uesEffect } from "react";
 import { projectStorage } from "../firebase/config";
 
 const useStorage = (file) => {
-    const [progess, setProgress] = useState(0)
+    const [progress, setProgress] = useState(0)
     const [error, setError] = useState(null)
     const [url, setUrl] = useState(null)
 
@@ -23,5 +23,5 @@ const useStorage = (file) => {
 
     return { progress, url, error }
 }
-
+ 
 export default useStorage
